@@ -1,0 +1,11 @@
+@import "partials/params";
+@import "partials/mixins";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+}
+ul{
+    list-style: none;
+}

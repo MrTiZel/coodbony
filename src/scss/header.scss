@@ -1,0 +1,119 @@
+@import "partials/params";
+@import "partials/mixins";
+
+#mainHeader {
+    height: 360px;
+
+    #mainNav {
+        .container {
+            @include containerWidth;
+            padding-top: 20px;
+
+            .row {
+                .logo {
+                    span {
+                        display: block;
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            .navUl {
+                ul {
+                    li {
+
+                        &:last-child {
+                            margin-left: 20px;
+                        }
+                        .active {
+                            background: $bgContent;
+                            color: $textColor2;
+                            padding-top: 80px;
+                        }
+
+                        a {
+                            color: $textColor1;
+                            text-decoration: none;
+                            padding: 10px;
+
+                            &:hover {
+                                background: $bgContent;
+                                color: $textColor2;
+                                padding-top: 80px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #textHeader {
+        margin-top: 50px;
+
+        .container {
+            @include containerWidth;
+
+            .row {
+                div[class*=col-] {
+                    text-align: center;
+
+                    i {
+                        display: block;
+                        font-size: 50px;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        background: url("../img/htmlANDcss.png") no-repeat;
+                        background-position: center 100px;
+                        height: 180px;
+                        font-size: 28px;
+                    }
+
+                    img {
+                        margin: auto;
+                        max-width: 701px;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @include W575 {
+        #mainNav {
+            .navUl {
+                ul {
+                    margin-top: 10px;
+                    border-top: black 1px solid;
+                    li {
+                        position: relative;
+                        left: -40px;
+                        margin-top: 15px;
+                        &:last-child {
+                            margin-left: 20px;
+                        }
+
+                        .active {
+                            background: $bgContent;
+                            color: $textColor2;
+                            padding: 10px !important;
+                        }
+
+                        a {
+                            color: $textColor1;
+                            text-decoration: none;
+                            padding: 10px;
+
+                            &:hover {
+                                background: $bgContent;
+                                color: $textColor2;
+                                padding: 10px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

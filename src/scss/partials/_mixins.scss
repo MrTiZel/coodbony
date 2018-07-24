@@ -1,0 +1,22 @@
+@mixin containerWidth{
+    max-width: 1024px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@mixin W767{
+        @media screen and (max-width: 769px){
+            @content;
+        }
+}
+@mixin W575{
+        @media screen and (max-width: 575px){
+            @content;
+        }
+}
+@mixin W480{
+        @media screen and (max-width: 480px){
+            @content;
+        }
+}
