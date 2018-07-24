@@ -6,7 +6,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var cleanCss = require('gulp-clean-css');
 var gulpIf = require('gulp-if');
 var browserSync = require('browser-sync').create();
-var imagemin = require('gulp-imagemin');//Minify PNG, JPEG, GIF and SVG images
+var imagemin = require('gulp-imagemin');
 
 var config = {
     paths: {
@@ -32,6 +32,12 @@ gulp.task('scss', function () {
         .pipe(browserSync.stream());
 });
 
+gulp.task('imgMin', function () {
+	gulp.src('src/img/*')
+		.pipe(imagemin())
+		.pipe(gulp.dest('public/img'))
+});
+
 gulp.task('serve', function () {
     browserSync.init({
         server: {
@@ -43,10 +49,4 @@ gulp.task('serve', function () {
     gulp.watch(config.paths.html).on('change', browserSync.reload);
 });
 
-gulp.task('default', function () {
-	gulp.src('src/img/*')
-		.pipe(imagemin())
-		.pipe(gulp.dest('public/img'))
-});
-
-gulp.task('default', ['scss', 'serve']);
+gulp.task('default', ['scss', 'imgMin', 'serve']);
