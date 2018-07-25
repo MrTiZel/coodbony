@@ -1,2 +1,70 @@
 @import "partials/params";
 @import "partials/mixins";
+
+#mainPortfolio{
+
+    .container{
+        @include containerWidth;
+        margin-top: 100px;
+        margin-bottom: 200px;
+        h2.h2Portfolio{
+            padding-bottom: 50px;
+        }
+        .row{
+            div[class*=col-]{
+                .effect-img{
+                    z-index: 1;
+                    overflow: hidden;
+                    max-width: 480px;
+                    height: 425px;
+                    margin: auto;
+                    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+                    margin-bottom: 50px;
+
+                    img{
+                        background-position: center center;
+                        background-size: 100% 100%;
+                    }
+
+                    .textPanel{
+                        position: relative;
+                        top: -60px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        background: $bgContent;
+                        width: 100%;
+                        height: 60px;
+
+                        h2{
+                            z-index: 2;
+                            color: $textColor2;
+                            font-size: 28px;
+                            padding-left: 20px;
+                        }
+                        p{
+                            z-index: 2;
+                            display: inline-block;
+                            position: relative;
+                            top: 10px;
+                            a{
+                                padding-right: 20px;
+                                font-size: 30px;
+                                color: $textColor2;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include W768{
+        .container{
+            h2.h2Portfolio{
+                padding: 50px 0 50px 0;
+            }
+        }
+    }
+}

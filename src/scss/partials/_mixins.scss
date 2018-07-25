@@ -5,7 +5,7 @@
     padding-right: 15px;
 }
 
-@mixin W767{
+@mixin W768{
         @media screen and (max-width: 769px){
             @content;
         }

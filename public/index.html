@@ -12,42 +12,77 @@
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
     <!-- Название сайта -->
     <title>coodbony - Портфолио: Володин П.Е.</title>
 </head>
 
 <body>
-<header id="mainHeader">
-    <nav id="mainNav">
-        <div class="container">
-            <div class="row justify-content-sm-between justify-content-start  align-items-end">
-                <div class="logo col-sm col-12">
-                    <img src="img/logo.png" alt="coodbony-logo">
-                    <span>HTML верстальщик - Володин Павел</span>
+    <header id="mainHeader">
+        <nav id="mainNav">
+            <div class="container">
+                <div class="row justify-content-sm-between justify-content-start  align-items-end">
+                    <div class="logo col-sm col-12">
+                        <img src="img/logo.png" alt="coodbony-logo">
+                        <span>HTML верстальщик - Володин Павел</span>
+                    </div>
+                    <div class="navUl col-sm-4 col-12">
+                        <ul class="d-flex  justify-content-sm-end justify-content-start">
+                            <li><a href="#" class="active">Портфолио</a></li>
+                            <li><a href="#">Резюме</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="navUl col-sm-4 col-12">
-                    <ul class="d-flex  justify-content-sm-end justify-content-start">
-                        <li><a href="#" class="active">Портфолио</a></li>
-                        <li><a href="#">Резюме</a></li>
-                    </ul>
+            </div>
+        </nav>
+        <div id="textHeader">
+            <div class="container">
+                <div class="row justify-content-center align-items-end">
+                    <div class="col-sm d-flex flex-column justify-content-center">
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                        <p>ПРОФЕССИОНАЛЬНАЯ<br> ВЕРСТКА САЙТОВ</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </nav>
-    <div id="textHeader">
+    </header>
+
+    <main id="mainPortfolio">
         <div class="container">
-            <div class="row justify-content-center align-items-end">
-                <div class="col-sm d-flex flex-column justify-content-center">
-                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    <p>ПРОФЕССИОНАЛЬНАЯ<br> ВЕРСТКА САЙТОВ</p>
+            <h2 class="h2Portfolio">Портфолио</h2>
+            <div class="row justify-content-md-between justify-content-center">
+                <div class="col-md-6 col-">
+                    <div class="effect-img">
+                        <a  data-fancybox="gallery" href="img/Take.jpg"><img src="img/Take_min.jpg" alt="img16" /></a>
+                        <div class="textPanel">
+                            <h2>Noisy <span>Terry</span></h2>
+                            <p>
+                                <a href="sait/Take/"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                <a href="https://github.com/MrTiZel/Take"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-">
+                    <div class="effect-img">
+                        <a  data-fancybox="gallery" href="img/Resto.jpg"><img src="img/Resto_min.jpg" alt="img16" /></a>
+
+                        <div class="textPanel">
+                            <h2>Noisy <span>Terry</span></h2>
+                            <p>
+                                <a href="sait/Resto/"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                <a href="https://github.com/MrTiZel/Resto"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </main>
     <!-- Подключение JQuery библеотеки -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.js"></script>
 </body>
 
 </html>
