@@ -1,2 +1,20 @@
 @import "partials/params";
 @import "partials/mixins";
+
+#mainFooter{
+    background: #282828;
+    width: 100%;
+    .container{
+        padding: 0;
+        .row{
+            @include containerWidth;
+            span{
+                color: lighten($textColor1, 30%);
+                font-size: 12px;
+                display: block;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}
