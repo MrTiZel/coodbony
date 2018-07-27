@@ -1,2 +1,103 @@
 @import "partials/params";
 @import "partials/mixins";
+
+#mainResume {
+    @include resumeWidth;
+    margin-top: 60px;
+
+    .container {
+        color: $textColor1;
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .about {
+            .role {
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                img {
+                    margin-right: 20px;
+                }
+            }
+
+            .box1,
+            .box2 {
+                margin-bottom: 20px;
+
+                ul {
+                    margin-left: -15px;
+
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+
+        .allSkill {
+            margin-bottom: 20px;
+
+            div[class*=col-] {
+                margin-left: -15px;
+                margin-bottom: 20px;
+
+                ul {
+                    margin-left: 0;
+                    padding-left: 0;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        span {
+                            z-index: 1;
+                            display: block;
+                            background: #e27878;
+                            width: 200px;
+                            height: 10px;
+
+                            i {
+                                z-index: 2;
+                                display: block;
+                                background: #282828;
+                                height: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .interest {
+            margin-bottom: 30px;
+
+            div[class*=col-] {
+                margin-left: -15px;
+            }
+        }
+    }
+    @include W580 {
+        margin-top: 100px;
+        .container {
+            
+            .allSkill {
+                margin-bottom: 20px;
+
+                div[class*=col-] {
+                    ul {
+                        li {
+                            span {
+                                width: 150px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

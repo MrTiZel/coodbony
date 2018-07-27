@@ -4,9 +4,20 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+@mixin resumeWidth{
+    max-width: 768px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 @mixin W768{
         @media screen and (max-width: 769px){
+            @content;
+        }
+}
+@mixin W580{
+        @media screen and (max-width: 579px){
             @content;
         }
 }
