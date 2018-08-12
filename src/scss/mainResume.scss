@@ -72,7 +72,9 @@
                 }
             }
         }
-
+        .certificate{
+            margin-bottom: 20px;
+        }
         .interest {
             margin-bottom: 30px;
 
@@ -84,7 +86,7 @@
     @include W580 {
         margin-top: 100px;
         .container {
-            
+
             .allSkill {
                 margin-bottom: 20px;
 
